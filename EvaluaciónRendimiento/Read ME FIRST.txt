@@ -1,0 +1,20 @@
+Este es el taller de evaluación Rendimiento.
+
+Se encuentra el código usado para multiplicar matrices con el algoritmo clásico y el de la transpuesta. 
+Dentro de cada carpeta con su respectivo nombre hay 3 archivos: biblio.c, biblio.h y principal.c
+
+También se incluye el archivo Perl con el que se automatizó la ejecución de las pruebas.
+Para correr el Perl, es necesario compilar los archivos que se tienen en las carpetas de Clasico y Transpuesta por separado. 
+Ambos pueden ejecutarse con el siguiente comando: gcc -o nombreEjecutable principal.c biblio.c
+Sin embargo, deben llamarse de manera distinta y el archivo Perl debe ajustarse para que corra con los nombres que se le pongan a los ejecutables.
+
+Además, se incluyen las carpetas con los resultados generado por el Perl.
+
+De igual manera se incluye el informa Evaluacion_Rendimiento.pdf que contiene el análisis realizado a los resultados obtenidos.
+
+El archivo prosesar_dat_a_CSV.cpp es un archivo en C++ que e utilizó para calcular los tiempos promedios de los resultados obtenidos.
+Este programa comvierte los resultados en archivos .csv y genera los promedios.
+
+La carpeta de SalidasCSV contiene los resultados en arcvhivos de tipo .csv
+
+En la carpeta promedios se encuentran los promedios de los tiempos de los resultados
