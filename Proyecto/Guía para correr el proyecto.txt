@@ -1,15 +1,50 @@
-Guía para correr el proyecto: Monitoreo de Sensores
+uía para correr el proyecto: Monitoreo de Sensores
+
+Autores: Juan Felipe Galvis, Andrés David Pérez Cely, Juan Diego Reyes
+Fecha: 21 de Mayo de 2024
+Materia: Sistemas Operativos
+Pontificia Universidad Javeriana
+Objetivo: Crear un sistema de monitoreo de datos de sensores de PH y
+					temperatura que utiliza un buffer circular, semáforos e hilos
+					para recolectar y registrar datos en archivos 
+
+Contenido del Proyecto:
+		- monitor.c -> Proceso Monitor
+		- sensor.c -> Proceso Sensor
+		- ph.txt -> Archivo con datos de prueba para el sensor ph
+		- temperatura.txt -> Archivo con datos de prueba para el sensor temperatura
+
+
+					COMO CORRER EL PROYECTO
 
 Primero es necesario poner a correr el archivo Makefile
 Para esto, se escribe por consola 'make'
+El Makefile genera los archivos ejecutables de los procesos
+Si se realiza un cambio en los procesos, es necesario volver a correr el Makefile 
 
-Luego, se corre el proceso monitor
+Segundo, se corre el proceso monitor
 Ejemplo de lo que se ingresa por consola:
 ./monitor -b 10 -t file-temp.txt -h file-ph.txt -p pipe1
 
-Luego, se pueden poner a correr los sensores
+					Significado banderas:
+-b es el tamaño de los búferes donde el hilo recolector colocará las medidas
+-t es el nombre del archivo de texto donde el hilo de temperatura colocará las mediciones de temperatura recibidas
+-h es el nombre del archivo de texto donde el hilo de Ph colocará las mediciones de PH recibidas
+-p es el nombre del pipe nominal que permite la comunicación entre los sensores y el monitor
+Es necesario poner primero la bandera y luego su valor respectivo
+Se puede cambiar el órden de las banderas de entrada
+
+Tercero, poner a correr los sensores
 Ejemplo de lo que se ingresa por consola:
 ./sensor -s 1 -t 3 -f temperatura.txt -p pipe1
 ./sensor -s 2 -t 3 -f ph.txt -p pipe1
 
-Se pueden poner a correr varios sensores a la vez al tener corriendo el proceso monitor.
+					Significado banderas:
+-s es el tipo de sensor, 1 es de temperatura y 2 es de ph
+-t  indica cada cuanto tiempo (t) en segundos se va a enviar la medición del proceso sensor al proceso monitor
+-f es el nombre del archivo con medidas de temperatura o de PH, según sea el caso
+-p es el nombre del pipe nominal que permite la comunicación entre los sensores y el monitor
+Es necesario poner primero la bandera y luego su valor respectivo
+Se puede cambiar el órden de las banderas de entrada
+
+Nota: Se pueden poner a correr varios sensores a la vez.
