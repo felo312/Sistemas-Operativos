@@ -1,6 +1,6 @@
  /*********************************************************************
 Proyecto: Monitoreo de Sensores
-Autores: , Juan Felipe Galvis, Andrés Pérez, Juan Diego Reyes
+Autores: Juan Felipe Galvis, Andrés Pérez, Juan Diego Reyes
 Fecha: 21 de Mayo de 2024
 Materia: Sistemas Operativos
 Pontificia Universidad Javeriana
