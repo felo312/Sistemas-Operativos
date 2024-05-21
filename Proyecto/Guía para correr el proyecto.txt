@@ -1,4 +1,4 @@
-uía para correr el proyecto: Monitoreo de Sensores
+Guía para correr el proyecto: Monitoreo de Sensores
 
 Autores: Juan Felipe Galvis, Andrés David Pérez Cely, Juan Diego Reyes
 Fecha: 21 de Mayo de 2024
