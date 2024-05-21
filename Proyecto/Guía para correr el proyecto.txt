@@ -1,0 +1,15 @@
+Guía para correr el proyecto: Monitoreo de Sensores
+
+Primero es necesario poner a correr el archivo Makefile
+Para esto, se escribe por consola 'make'
+
+Luego, se corre el proceso monitor
+Ejemplo de lo que se ingresa por consola:
+./monitor -b 10 -t file-temp.txt -h file-ph.txt -p pipe1
+
+Luego, se pueden poner a correr los sensores
+Ejemplo de lo que se ingresa por consola:
+./sensor -s 1 -t 3 -f temperatura.txt -p pipe1
+./sensor -s 2 -t 3 -f ph.txt -p pipe1
+
+Se pueden poner a correr varios sensores a la vez al tener corriendo el proceso monitor.
